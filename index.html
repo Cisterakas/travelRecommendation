@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover beaches, temples, and memorable destinations with TravelBloom.">
+  <title>TravelBloom | Explore dream destinations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="logo" href="index.html" aria-label="TravelBloom home">Travel<span>Bloom</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <form class="search-container" id="searchForm" role="search">
+      <label class="sr-only" for="searchInput">Search destinations</label>
+      <input type="search" id="searchInput" placeholder="Search beaches, temples, or countries" autocomplete="off">
+      <button id="btnSearch" type="submit">Search</button>
+      <button id="btnReset" type="button">Clear</button>
+    </form>
+  </nav>
+
+  <main class="container">
+    <section class="hero-section">
+      <p class="eyebrow">Travel with intention</p>
+      <h1>Find your next <em>beautiful</em> escape.</h1>
+      <p>
+        Explore handpicked beaches, temples, and cities around the world. Start with a
+        mood, a place, or a country and let your journey unfold.
+      </p>
+      <button class="btn-primary" type="button" id="exploreButton">Explore destinations <span aria-hidden="true">→</span></button>
+
+      <div class="popular-searches">
+        <span>Try searching</span>
+        <button type="button" class="search-chip" data-query="beaches">Beaches</button>
+        <button type="button" class="search-chip" data-query="temples">Temples</button>
+        <button type="button" class="search-chip" data-query="Japan">Japan</button>
+      </div>
+
+      <div class="social-links">
+        <span>Follow the journey</span>
+        <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a>
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube</a>
+      </div>
+    </section>
+
+    <section class="results-section" aria-live="polite" aria-labelledby="resultsHeading">
+      <div class="results-heading">
+        <div>
+          <p class="eyebrow">Curated for you</p>
+          <h2 id="resultsHeading">Where will you go?</h2>
+        </div>
+        <p id="resultsCount" class="results-count"></p>
+      </div>
+      <div id="resultsContainer" class="results-grid">
+        <div class="empty-state">
+          <span class="empty-icon" aria-hidden="true">✦</span>
+          <h3>Search to begin exploring</h3>
+          <p>Discover destinations for your next story.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Made by Joshua Cister for the JavaScript Programming Essentials Certification Final Project on Coursera.
+  </footer>
+
+  <script src="travel_recommendation.js"></script>
+</body>
+</html>

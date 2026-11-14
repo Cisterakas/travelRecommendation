@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact TravelBloom for personalized travel recommendations.">
+  <title>Contact TravelBloom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="logo" href="index.html" aria-label="TravelBloom home">Travel<span>Bloom</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-content contact-page">
+    <p class="eyebrow">Let's plan something</p>
+    <h1>Tell us where you want to go.</h1>
+    <p>Get in touch with us for personalized travel recommendations or inquiries.</p>
+
+    <form class="contact-form" onsubmit="handleContactSubmit(event)">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Send message <span aria-hidden="true">→</span></button>
+    </form>
+    <p id="contactStatus" class="form-status" role="status"></p>
+  </main>
+
+  <footer class="site-footer">
+    Made by Joshua Cister for the JavaScript Programming Essentials Certification Final Project on Coursera.
+  </footer>
+
+  <script>
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      document.getElementById('contactStatus').textContent =
+        'Thank you! Your message is on its way. We will be in touch shortly.';
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
